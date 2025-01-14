@@ -1,0 +1,63 @@
+POST http://localhost:8001/blogs
+Content-Type: application/json
+
+{
+  "title": "하이하이333",
+  "author": "eb",
+  "content": "출석체크"
+}
+
+###
+GET http://localhost:8001/blogs?limit=2
+
+###
+GET http://localhost:8001/blogs/678623b365889aeedf6a7bfc/comments
+
+###
+PATCH http://localhost:8001/blogs/678623b365889aeedf6a7bfc
+Content-Type: application/json
+
+{
+  "title": "리액트 공부해요요",
+  "content": "훅 공부"
+}
+
+###
+DELETE http://localhost:8001/blogs/678623b365889aeedf6a7bfb
+
+###
+POST http://localhost:8001/blogs/678623b365889aeedf6a7bfc/comments
+Content-Type: application/json
+
+{
+      "content": "커스텀훅 만들기 공부해요",
+      "author": "하이",
+      "blogId":"678623b365889aeedf6a7bfc"
+    }
+
+###
+GET http://localhost:8001/blogs/67862410467a3065f6c65059/comments
+
+###
+PATCH http://localhost:8001/blogs/678623b365889aeedf6a7bfd/comments
+Content-Type: application/json
+
+{
+  "content": "많이 어렵나요??",
+  "author": "아메리카노",
+  "blogId": "678623b365889aeedf6a7bfd"
+}
+
+###
+GET http://localhost:8001/blogs/678623b365889aeedf6a7bfc/comments/6786ab4d5305a47554e1547a/reply
+
+
+
+###
+Content-Type: application/json
+
+{
+  "content": "굿굿굿",
+  "author": "테스트",
+  "blogId": "678623b365889aeedf6a7bfd"
+}
